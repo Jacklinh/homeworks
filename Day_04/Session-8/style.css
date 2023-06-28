@@ -18,6 +18,18 @@ body {
 ul {
     list-style: none;
 }
+.main_inner {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    padding: 40px 0;
+}
+.main_inner .sidebar {
+    width: 30%;
+}
+.main_inner .main_content {
+    flex: 1;
+}
 /* header */
 #header {
     background-color: #FF8C00;
@@ -33,7 +45,7 @@ ul {
 .header_logo {
     font-size: 42px;
     font-weight: bold;
-    width: 60%;
+    width: 40%;
 }
 .header_logo a {
     color: inherit;
@@ -65,6 +77,12 @@ ul {
     text-transform: capitalize;
     font-size: 16px;
     transition: color 0.3s ease-in-out;
+    padding: 5px 10px;
+}
+.header_navigation .list_navi>li>a.active {
+    background-color: ghostwhite;
+    color: #222222;
+    border-radius: 30px;
 }
 .header_navigation .list_navi>li>a i {
     margin-left: 5px;
@@ -123,4 +141,146 @@ ul {
 .header_navigation .list_navi>li:hover>a i {
     color: #222222;
     transform: rotateX(180deg);
+}
+/* sidebar */
+.box_tweet li{
+    margin-bottom: 10px;
+}
+.box_tweet li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #222222;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.box_tweet li a i{
+    margin-right: 15px;
+}
+.box_tweet .tweet_icon {
+    color: blue;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+/* button */
+.btn {
+    text-align: center;
+    display: inline-block;
+    min-width: 200px;
+    padding: 10px;
+    border: 0;
+    border-radius: 50px;
+    text-transform: capitalize;
+    font-weight: bold;
+    overflow: hidden;
+}
+.btn_default {
+    background-color: blue;
+    color: #ffffff;
+}
+.btn_orangered {
+    background-color: #FF8C00;
+}
+.btn_black {
+    background-color: black;
+    color: #ffffff;
+}
+/* box_product_detail */
+.box_product_detail {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.box_product_detail .product_detail_image {
+    width: 50%;
+}
+.box_product_detail .product_detail_image img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.box_product_detail .product_detail_cnt {
+    flex: 1;
+}
+.product_detail_cnt h3 {
+    color: #222222;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.product_detail_cnt .product_price {
+    margin-bottom: 20px;
+}
+.product_detail_cnt .product_price strong {
+    color: orangered;
+    font-weight: bold;
+    font-size: 18px;
+}
+.product_detail_cnt .product_price del {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.product_color {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 0;
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-bottom: 20px;
+}
+.product_color .color_label {
+    width: 60px;
+}
+.product_color .color_name {
+    flex: 1;
+}
+.product_color .color_name ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 5px;
+}
+.product_color .color_name a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    background-color: #ffffff;
+    line-height: 1;
+    padding: 4px;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease-in-out,color 0.3s ease-in-out;
+}
+.product_color .color_name a:hover {
+    background-color: #aaaaaa;
+    color: #ffffff;
+}
+.product_policy li {
+    margin-bottom: 10px;
+}
+.product_policy p {
+    color: #222222;
+    font-weight: bold;
+}
+.product_policy p i {
+    color: cadetblue;
+    margin-right: 5px;
+}
+.product_policy p span {
+    font-size: 12px;
+    color: #aaaaaa;
+    font-weight: 400;
+}
+.product_button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    margin-top: 20px;
+}
+.product_button .btn {
+    width: calc((100% - 10px)/2);
+    min-width: 120px;
+    border-radius: 0;
+}
+.product_button .btn i {
+    margin-right: 10px;
 }
