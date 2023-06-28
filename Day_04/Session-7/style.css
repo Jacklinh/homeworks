@@ -37,8 +37,11 @@ ul {
     margin-bottom: 60px;
 }
 .section_product h2 {
+    display: block;
     font-size: 24px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 .list_product {
     display: flex;
@@ -93,12 +96,12 @@ ul {
 .product_image {
     position: relative;
 }
-.product_image .product_hot {
+.product_image .product_sale {
     position: absolute;
     top: 10px;
     left: 10px;
 }
-.product_image .product_hot span {
+.product_image .product_sale .label {
     display: block;
     padding: 8px 5px;
     text-align: center;
@@ -113,7 +116,7 @@ ul {
     line-height: 1;
     margin-bottom: 10px;
 }
-.product_image .product_hot .sale {
+.product_image .product_sale .label_discout {
     background-color: brown;
 }
 .product_offer {
