@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* common */
+.post_item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.post_item .post_title {
+    padding-bottom: 20px;
+}
+.post_thumbnail img,
+.detail_item figure img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.post_title {
+    font-size: 20px;
+    color: #222;
+}
+/* section post */
+.post_single .post_title{
+    background-color: #f80;
+    color: #fff;
+    padding: 10px;
+}
+.post_item .post_content {
+    overflow: hidden;
+}
+.post_item .post_content .post_thumbnail {
+    float: left;
+    width: 40%;
+}
+.post_item .post_content .post_description {
+    float: left;
+    width: calc(100% - 40%);
+    padding-left: 15px;
+}
+/* section post detail*/
+.post_detail h3{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.post_detail .detail_description {
+    font-weight: bold;
+}
+.post_detail ul {
+    margin: 0 20px 15px;
+}
+.post_detail ul li a {
+    color: #a8a2a2;
+    font-size: 14px;
+    text-decoration: none;
+}
+.post_detail p {
+    margin-bottom: 15px;
+}
+.detail_item figure figcaption {
+    color: #a8a2a2;
+    font-size: 14px;
+    padding: 10px 0;
+}
+/* section post element 5c-d*/
+.post_element .first_letter::first-letter {
+    color: rgb(223, 69, 69);
+    font-size: 22px;
+}
+.post_element p {
+    margin-bottom: 15px;
+}
+.post_element p a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.post_info_name {
+    font-size: 22px;
+    margin-top: 20px;
+}
+.post_info_name::before,
+.post_info_name::after{
+    content: '';
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(./images/la_co.jpg) no-repeat;
+    width: 40px;
+    height: 44px;
+    background-size: 40px auto;
+}
+.post_info_name::before {
+    margin-right: 10px;
+}
+.post_info_name::after {
+    margin-left: 10px;
+}
