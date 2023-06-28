@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main {
+    padding: 20px 0;
+}
+ul {
+    list-style: none;
+}
+/* skill */
+.box_skill {
+    margin-bottom: 40px;
+}
+.box_skill li {
+    margin-bottom: 20px;
+}
+.skill_item {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.4;
+}
+.skill_item .skill_label {
+    width: 20%;
+    text-align: right;
+    padding: 5px 20px;
+    height: 40px;
+}
+.skill_item .skill_process {
+    flex: 1;
+    background-color: aliceblue;
+    height: 100%;
+    position: relative;
+    border-left: 0;
+    height: 40px;
+}
+.skill_item .skill_process .percent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.8;
+    padding: 5px 20px;
+}
+/* bg color */
+.bg_red .skill_label,
+.bg_red .percent{
+    background-color: #FF4500;
+}
+.bg_green .skill_label,
+.bg_green .percent{
+    background-color: #2E8B57;
+}
+.bg_turquoise .skill_label,
+.bg_turquoise .percent{
+    background-color: #40E0D0;
+}
+.bg_yellow .skill_label,
+.bg_yellow .percent{
+    background-color: #FFDAB9;
+}
+.bg_violet .skill_label,
+.bg_violet .percent{
+    background-color: #EE82EE;
+}
+.bg_orchid .skill_label,
+.bg_orchid .percent{
+    background-color: #DA70D6;
+}
+.bg_olive .skill_label,
+.bg_olive .percent{
+    background-color: #808000;
+}
+/* skill_icon */
+.skill_icon {
+    padding: 50px 20px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 1px 16px rgba(71, 112, 174, 0.2);
+}
+.skill_icon .bg_red .skill_label,
+.skill_icon .bg_green .skill_label,
+.skill_icon .bg_turquoise .skill_label,
+.skill_icon .bg_yellow .skill_label,
+.skill_icon .bg_olive .skill_label {
+    background-color: transparent;
+    color: #222222;
+}
+.skill_icon .skill_item {
+    align-items: center;
+}
+.skill_icon .skill_item .skill_process {
+    height: 10px;
+}
+.skill_icon .skill_item .skill_label i {
+    margin-right: 10px;
+}
+/* box card */
+.box_card,
+.box_coutdown {
+    background-color: #E6E6FA;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.box_card>ul,
+.box_coutdown>ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    align-items: stretch;
+}
+.box_card>ul>li,
+.box_coutdown>ul>li {
+    width: calc((100% - 60px)/4);
+}
+.card_item {
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 1px 16px rgba(71, 112, 174, 0.2);
+    padding: 10px;
+}
+.card_item .card_avatar img {
+    width: 100%;
+    height: auto;
+}
+.card_item .card_name {
+    padding: 10px;
+    text-align: center;
+}
+.card_item .card_name h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.card_item .card_name span {
+    color: #aaaaaa;
+    text-transform: capitalize;
+}
+.card_item .list_info {
+    margin-bottom: 20px;
+}
+.card_item .list_info li {
+    border-bottom: 1px dashed #aaaaaa;;
+}
+.info_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+}
+.info_item .info_title {
+    text-transform: uppercase;
+}
+.info_item .info_title i{
+   margin-right: 5px;
+}
+.info_item .info_cnt {
+    color: #aaaaaa;
+    font-size: 12px;
+} 
+.card_address {
+    background-color: #FF4500;
+    color: #ffffff;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+.card_address .address_label {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.card_address .address_link a {
+    text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+}
+.card_address .address_link i {
+    margin-right: 10px;
+}
+/* card background */
+.card_red  {
+    background-color: #FF4500;
+}
+.card_green  {
+    background-color: #2E8B57;
+}
+.card_turquoise  {
+    background-color: #40E0D0;
+}
+.card_yellow  {
+    background-color: #FFDAB9;
+}
+.card_violet  {
+    background-color: #FF4500;
+}
+.card_orchid {
+    background-color: #DA70D6;
+}
+.card_olive  {
+    background-color: #808000;
+}
+.card_pink  {
+    background-color: #FF69B4;
+}
+/* box coutdown */
+.coutdown_item {
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 1px 16px rgba(71, 112, 174, 0.2);
+    text-align: center;
+}
+.coutdown_number {
+    padding: 20px;
+}
+.coutdown_number p {
+    font-size: 16px;
+    color: #aaaaaa;
+    text-transform: uppercase;
+}
+.coutdown_number span {
+    display: block;
+    font-size: 32px;
+    color: #228B22;
+}
+.coutdown_chart {
+    background-color: #F8F8FF;
+    border-top: 1px solid #aaaaaa;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.coutdown_chart .chart_process {
+    border: 1px solid #aaaaaa;
+    background-color: #ffffff;
+    width: 20px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+.coutdown_chart .chart_process .chart_percent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.coutdown_chart .chart_title {
+    color: #aaaaaa;
+    text-transform: uppercase;
+    font-size: 12px;
+}

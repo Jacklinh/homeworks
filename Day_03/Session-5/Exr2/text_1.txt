@@ -1,0 +1,55 @@
+RESUSME
+ALAN WALKER
+Graphic Designer
+PROFILE
+Name
+Alan Walker
+JOB EXPERIENCES
+2014-2015
+2011-2013
+2009-2010
+COMPANY NAME 1
+Position held
+Lorem ipsum dolor sit amet, consectetur adipiscing
+elit, sed do eiusmod tempor
+COMPANY NAME 2
+Position held
+Lorem ipsum dolor sit amet, consectetur adipiscing
+elit, sed do eiusmod tempor
+COMPANY NAME 3
+Position held
+Lorem ipsum dolor sit amet, consectetur adipiscing
+elit, sed do eiusmod tempor
+EDUCATION
+2008-2012
+Date of Birth
+10/05/1989
+Phone
+2006-2007
+UNIVERSITY NAME
+Course studied
+Lorem ipsum dolor sit amet, consectetur adipiscing
+elit, sed do eiusmod tempor
+UNIVERSITY NAME
+Course studied
+Lorem ipsum dolor sit amet, consectetur adipiscing
+elit, sed do eiusmod tempor
+PROFESSIONAL SKILLS
+Photoshop
+Illustrator
+0193 483 4827
+Email
+alanwalker@gmail.com
+Website
+www.yourdomain.com
+HOBBIES
+Dance
+Read Book
+Swimming
+HTML (5)
+CSS (3)
+PERSONAL SKILLS
+Team Work
+Timekeeping
+Organisation
+Communication
