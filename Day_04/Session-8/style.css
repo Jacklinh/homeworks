@@ -172,6 +172,7 @@ ul {
     text-transform: capitalize;
     font-weight: bold;
     overflow: hidden;
+    cursor: pointer;
 }
 .btn_default {
     background-color: blue;

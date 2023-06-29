@@ -43,6 +43,9 @@ ul {
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
+.section_product ul li a {
+    text-decoration: none;
+}
 .list_product {
     display: flex;
     flex-wrap: wrap;
@@ -57,16 +60,13 @@ ul {
     height: auto;
     vertical-align: top;
 }
-.box_product .product_title a {
+.box_product .product_title {
     display: inline-block;
     text-decoration: none;
     color: #222;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-}
-.box_product .product_title a:hover {
-    color: #008000;
 }
 .box_product .product_price {
     color: red;
