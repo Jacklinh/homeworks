@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+/* schedule */
+.section_schedule {
+    padding: 100px 0;
+    background-color: #3b3e47 ;
+}
+.schedule_heading {
+    max-width: 60%;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+.schedule_heading h2{
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.schedule_heading p {
+    color: rgba(255,255,255,0.5);
+}
+.schedule_table {
+    margin-bottom: 40px;
+}
+.schedule_table th {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
+}
+.schedule_table thead {
+    background-color: #6b7de0;
+}
+.schedule_table tbody {
+    background-color: #2e3239;
+}
+.schedule_table tbody td {
+    padding: 15px;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+}
+.schedule_table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.schedule_table tbody tr:last-child {
+    border-bottom: 0;
+}
+/* date_table */ 
+.date_table {
+    background-color: #ffffff;
+    color: #222222;
+    margin-bottom: 40px;
+}
+.date_table tr {
+    border-bottom: 1px solid #3b3e47;
+}
+.date_table tr:last-child {
+    border-bottom: 0;
+}
+.date_table .date_item {
+    padding: 10px 20px;
+}
+.date_table .date_item p {
+    font-size: 13px;
+    color: #999999;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+.date_table .date_item .date_title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #222222;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.date_table .date_item.date_time .date_title {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.date_table .date_item.date_img{
+    padding: 0;
+}
+.date_table .date_item img{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+/* button */
+.btn {
+    display: inline-block;
+    background-color: #f7f7f7;
+    color: #222222;
+    border: 1px solid #f7f7f7;
+    padding: 13px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 120px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease-in-out;
+}
+.btn:first-child {
+    margin-left: 0;
+}
+.btn.btn_gray {
+    background-color: #f7f7f7;
+    border-color: #f7f7f7;
+}
+.btn.btn_primary {
+    background-color: #fe6466;
+    border-color: #fe6466;
+    color: #ffffff;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.btn.btn_price {
+    min-width: 140px;
+    border-color: #052c52;
+    background-color: #052c52;
+    color: #e9a811;
+    border-radius: 5px;
+}
+.btn.btn_price i {
+    margin-left: 5px;
+    font-size: 11px;
+}
+.table_border,
+.table_border tbody {
+    background-color: #ffffff;
+    color: #222222;
+}
+.table_border thead {
+    background-color: #052c52;
+    color: #e9a811;
+}
+.table_border thead th {
+    color: #e9a811;
+}
+.table_border thead th:first-child {
+    background-color: #ffffff;
+}
+.table_border tbody th {
+    color: #222222;
+}
+.table_border tbody td {
+    color: #6f7274;
+}
+.table_border td,
+.table_border th {
+    border: 1px solid #dee2e6;
+}
