@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            margin: 0 auto;
+        }
+        .box_yellow {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            padding: 10px;
+            color: #fff;;
+        }
+    </style>
+</head>
+<body>
+    <!-- task 1 -->
+    <p id="show_name"></p>
+    <!-- task 2 -->
+    <p id="show_number"></p>
+    <!-- task 3 -->
+    <button id="btn_delete" onclick="funcDelete()">Delete</button>
+    <!-- task 4 -->
+    <div class="box_yellow">yellow</div>
+    <!-- task 7 -->
+    <p>Press a key in the input field:</p>
+    <input type="text" id="input_key">
+    <script>
+        // task 1
+        let userName = prompt('vui long nhap username');
+        let password = prompt('vui long nhap password');
+        if(userName !== null && password !== null) {
+            document.getElementById('show_name').innerHTML = 'Tên của bạn là: ' + userName +'<br>Mật khẩu của bạn là: '+password;
+        }
+        // task 2
+        let a = prompt('vui long nhap gia tri a');
+        let b = prompt('vui long nhap gia tri b');
+        let x = parseInt(a) + parseInt(b);
+        let y = parseInt(a) - parseInt(b);
+        if(!(isNaN(a)) && !(isNaN(b))) {
+            document.getElementById('show_name').innerHTML = 'Kết quả a +  b: ' + x +'<br>Kết quả a - b: '+y;
+        }else {
+            document.getElementById('show_name').innerHTML = 'a va b chua phai la number';
+        }
+        // // task 3
+        function funcDelete(){
+            let show = confirm("Bạn có chắc chắn muốn xóa record này không ?");
+            if(show){
+                console.log("đã xoa thanh cong");
+            }else {
+                console.log("chưa xóa");
+            }
+        }
+        // // task 4
+        document.querySelector('.box_yellow').addEventListener('mouseenter',function(){
+            console.log('Bạn đã rê chuột lên hình vuông');
+        })
+        // task 5
+        let getInput = promt('nhap giá trị: ');
+        if(isNaN(getInput)) {
+            console.log("dau vao khong phai la number")
+        }else {
+            console.log("dau vao la number");
+        }
+        // // task 7
+        let inputName = document.getElementById('input_key');
+        inputName.addEventListener('keydown',function(){
+            console.log('ban đã nhấn phím');
+        })
+        inputName.addEventListener('keyup',function(){
+            console.log('ban đã nhan phim xuong va tha ra');
+        })
+        inputName.addEventListener('keypress',function(){
+            console.log('ban đã nhan phim nhung chua tha ra');
+        })
+    </script>
+</body>
+</html>
