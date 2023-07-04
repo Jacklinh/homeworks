@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            max-width: 80%;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+            margin:0 auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .table_shirt th {
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px;
+            text-align: center;
+            background-color: #6b7de0;
+        }
+        .table_shirt td {
+            background-color: #2e3239;
+            padding: 15px;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+        }
+        .table_shirt tr {
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        .table_shirt tr:last-child {
+            border-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn_delete" onclick="funcDelete()"> Delete </button>
+    <ul class="list_car"></ul>
+    <table class="table_shirt"></table>
+    <script>
+        // I. Home 1
+        // task 1
+        // let username = prompt('vui long nhap username');
+        // let password = prompt('vui long nhap password');
+        // if(username === 'aptech' && password === '38yenbai'){
+        //     console.log('Bạn đã đăng nhập thành công');
+        // }else {
+        //     console.log('Username hoặc mật khẩu không hợp lệ');
+        // }
+        // task 2
+        
+        // function funcDelete(){
+        //     let show = confirm("Bạn có chắc chắn muốn xóa record này không ?");
+        //     if(show){
+        //         console.log("Đã xóa");
+        //     }else {
+        //         console.log("Không xóa");
+        //     }
+        // }
+        /* 
+            task 3
+            * Định nghĩa một mảng đơn giản gồm 5 phần tử là số từ 1 - 5
+            * Hiển thị ra console giá trị phần từ đầu tiên trong mảng trên
+            * Hãy thêm một phần từ mới vào cuối mảng, và hiển thị danh sách mảng mới ra console
+            * Lấy số lượng phần tử của mảng trên show ra console
+            * Render ra console giá trị từng phần tử của mảng trên như bên dưới
+        */
+       let arrNumber = [1,2,3,4,5];
+       console.log('gia tri phan tu dau tien',arrNumber[0]);
+       arrNumber.push(6);
+       let arrLeng = arrNumber.length;
+       for(let i = 0; i < arrLeng; i++) {
+            console.log('cac phan tu cua mang '+i, arrNumber[i])
+       }
+       console.log('số lượng phần tử của mảng',arrLeng);
+       /*
+        task 4:
+        * Bước 1: Định nghĩa một mảng gồm 5 hãng xe hơi mà bạn biết và in kết quả ra console
+        * Bước 2: Bạn hãy thay đổi tên hãng xe xếp thứ 2 trong mảng bạn vừa định nghĩa ở bước 1 và in kết quả ra console
+        * Bước 3: Định nghĩa một mảng mới có chứa 5 hãng xe nói trên và bạn thêm vào cuối mảng mới này một hãng xe thứ 6 và in kết quả ra console
+        * Bước 4: Gộp 2 mảng ở bước 1 và bước 3 lại thành một mảng mới, và in kết quả ra console
+       */
+        let arrCar = ['VinFast','Mazda','Toyota','Mercedes','Lexus'];
+        console.log(arrCar);
+        arrCar.splice(2,1,'Ford');
+        console.log('thay đổi tên hãng xe xếp thứ 2 trong mảng',arrCar);
+        let arrCarNew = arrCar.slice();
+        arrCarNew.push('Hyundai');
+        console.log('thêm vào cuối mảng mới',arrCarNew);
+        let arrCarConcat = arrCar.concat(arrCarNew);
+        console.log('Gộp 2 mảng',arrCarConcat);
+
+        // II. Home 2
+        // task 1
+        const cars = ['Toyota', 'Honda', 'Kia', 'BMW', 'Audi', 'Mitsubishi'];
+        let  lengthCars = cars.length;
+        let ulCar = document.querySelector('.list_car');
+        for(let i = 0; i < lengthCars; i++) {
+            let liCar = document.createElement('li');
+            ulCar.appendChild(liCar);
+            liCar.innerHTML = liCar.innerHTML + cars[i];
+        }
+        
+        // task 2
+        /*
+            Tính huống thực tế có một danh sách sản phẩm khách hàng đã mua: 
+
+            + Áo bull Size M, 2 sản phẩm, giá 160.000đ
+            + Áo khoác gió NorthFace Size L, 1 sản phẩm - giá 
+            600.000đ
+            + Quần Jean Nam Size 30 , 1 sản phẩm, giá 350.
+            
+        - Hãy Dùng mảng và vòng lặp để code thể hiện đơn hàng trên
+        - In ra màn hình sách sản phẩm với thẻ table bằng document.write
+        - Tạo thêm cột thành tiên cho từng dòng bằng số lượng x đơn  giá
+        - In giá trị tổng tiền vào cuối bill
+        */
+        const arrShirt = [
+            {name: 'Bull', size: 'M', product: 2, price: 160000},
+            {name: 'NorthFace', size: 'L', product: 1, price: 600000},
+            {name: 'Jean', size: 30, product: 1, price: 350000}
+        ];
+        
+        let lengthShirt = arrShirt.length;
+        let tableShirt = document.querySelector('.table_shirt');
+        let thShirt =  document.createElement('tr');
+        thShirt.innerHTML += '<th>Tên áo</th>';
+        thShirt.innerHTML += '<th>Size</th>';
+        thShirt.innerHTML += '<th>Số lượng sản phẩm</th>';
+        thShirt.innerHTML += '<th>giá</th>';
+        thShirt.innerHTML += '<th>Thành tiền</th>';
+        tableShirt.appendChild(thShirt);
+        let total = 0;
+        for(let i = 0; i< lengthShirt; i++) {
+            let trShirt =  document.createElement('tr');
+            let priceNumber = Number(arrShirt[i].price)*Number(arrShirt[i].product);
+            trShirt.innerHTML += '<td>'+arrShirt[i].name+'</td>'; 
+            trShirt.innerHTML += '<td>'+arrShirt[i].size+'</td>'; 
+            trShirt.innerHTML += '<td>'+arrShirt[i].product+'</td>'; 
+            trShirt.innerHTML += '<td>'+arrShirt[i].price+'đ</td>';
+            trShirt.innerHTML += '<td class="price">'+priceNumber+'đ</td>';
+            tableShirt.appendChild(trShirt);
+            total += priceNumber;
+        }
+        let totalShirt =  document.createElement('tr');
+        totalShirt.innerHTML += '<th>Tổng tiền</th>';
+        totalShirt.innerHTML += '<td class="total" colspan="4">'+total+'đ</td>';
+        tableShirt.appendChild(totalShirt);
+    </script>
+</body>
+</html>
