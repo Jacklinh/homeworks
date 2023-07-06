@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        form {
+            padding: 40px 0;
+        }
+        form label {
+            display: inline-block;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 16px;
+            min-width:  160px;
+        }
+        form p {
+            margin-bottom: 10px;
+        }
+        form input {
+            padding: 5px 10px;
+        }
+        form button {
+            min-width: 60px;
+            padding: 5px;
+            text-transform: uppercase;
+            background-color: green;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 0 10px 20px;
+        }
+        .result_price {
+            font-size: 18px;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form_price">
+            <p>
+                <label for="quantity_number">Số lượng: </label>
+                <input type="number" id="quantity_number" name="quantity_number" value="1" min="1">
+            </p>
+            <p>
+                <label for="price_number">Giá: </label>
+                <input type="number" id="price_number" name="price_number" value="0" min="0">
+            </p>
+            <button type="button" class="btn_increase">+</button>
+            <button type="button" class="btn_reduce">-</button>
+            <p class="result_price">Thành tiền: 0</p>
+        </form>
+        <div class="table_users"></div>
+        <ul id="list">
+            <li class="child_one">Child 1</li>
+            <li class="child_two">
+                <img src="images/photo.png" alt="photo" />
+            </li>
+            <li class="child_three"><a href="link3">Child 3</a></li>
+        </ul>
+    </div>
+    <script>
+        // task 1
+        let quantityNumber = document.querySelector('#quantity_number');
+        let priceNumber = document.querySelector('#price_number');
+        let btnIncrease = document.querySelector('.btn_increase');
+        let btnReduce = document.querySelector('.btn_reduce');
+        let resultPrice = document.querySelector('.result_price');
+        let quantityValue = parseInt(quantityNumber.value);
+        let priceValue = parseInt(priceNumber.value);
+        function totalPrice(){
+            let total = quantityValue * priceValue;
+            resultPrice.innerHTML = 'Thành tiền: '+total;
+        }
+        quantityNumber.addEventListener('change', function(){
+            quantityValue = parseInt(quantityNumber.value);
+            totalPrice();
+        });
+        priceNumber.addEventListener('change',function(){
+            priceValue = parseInt(priceNumber.value);
+            totalPrice();
+        });
+
+        function increaseQuantity() {
+            quantityValue +=1;
+            quantityNumber.value = quantityValue.toString();
+            totalPrice();
+        }
+        btnIncrease.addEventListener('click',increaseQuantity);
+
+        function reduceQuantity() {
+            if(quantityValue > 1) {
+                quantityValue -=1;
+                quantityNumber.value = quantityValue.toString();
+                totalPrice();
+            }
+        }
+        btnReduce.addEventListener('click',reduceQuantity);
+
+        // task 2
+        const users = [
+            { id: 1, name: 'iPhone 12 Pro Max', price: 250000000, quanlity: 1 },
+            { id: 2, name: 'Samsung Galaxy S21', price: 32000000, quanlity: 1 },
+            { id: 3, name: 'Xiaomi Note 11', price: 18000000, quanlity: 2 },
+            { id: 4, name: 'Galaxy Ford Pro', price: 47000000, quanlity: 1 },
+            { id: 5, name: 'OPPO Find N2 Flip 5G', price: 19990000, quanlity: 3 }
+        ];
+        let html = '<table>';
+        html += '<tr><th>ID</th><th>name</th><th>price</th><th>quanlity</th></tr>';
+        users.forEach((user) => {
+            html +=`<tr><td>${user.id}</td><td>${user.name}</td><td>${user.price}</td><td>${user.quanlity}</td></tr>`;
+        });
+        html += '</table>';
+        document.querySelector('.table_users').innerHTML = html;
+        // task 3
+        let ulList = document.querySelector('#list');
+        ulList.classList.add('add_class');
+        console.log('noi dung cua li dau tien:', document.querySelector('.child_one').textContent);
+        console.log('src img :', document.querySelector('.child_two > img').getAttribute('src') + ' and alt :' + document.querySelector('.child_two > img').getAttribute('alt'));
+        console.log('class li:nth-child(3): ',document.querySelector('.child_three').getAttribute('class'));
+
+        
+    </script>
+</body>
+</html>
