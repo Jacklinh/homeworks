@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <section class="slide">
+            <div class="container">
+                <h2>slide basic</h2>
+                <div class="slide_wrap" id="slide_1">
+                    <div class="slide_inner">
+                        <div class="slide_item">
+                            <p><img src="./images/b1.jpg" width="800" height="600" alt=""></p>
+                        </div>
+                        <div class="slide_item">
+                            <p><img src="./images/b2.jpg" width="800" height="600" alt=""></p>
+                        </div>
+                        <div class="slide_item">
+                            <p><img src="./images/b3.jpg" width="800" height="600" alt=""></p>
+                        </div>
+                        <div class="slide_item">
+                            <p><img src="./images/b4.jpg" width="800" height="600" alt=""></p>
+                        </div>
+                        <div class="slide_item">
+                            <p><img src="./images/b5.jpg" width="800" height="600" alt=""></p>
+                        </div>
+                    </div>
+                    <div class="slide_btn">
+                        <button class="btn btn_prev">Prev</button>
+                        <button class="btn btn_next">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        let slideItem = document.querySelectorAll('#slide_1 .slide_item');
+        let currentIndex = 0;
+        function activeSlide(index,item){
+            let classActive = item[index].classList.contains('active');
+            if(!classActive) {
+                    item[currentIndex].classList.remove('active');
+                    item[index].classList.add('active');
+                    currentIndex = index;
+            }
+        }
+        function prevSilde(item){
+            let prevIndex = currentIndex - 1;
+            if(prevIndex < 0){
+                prevIndex = item.length - 1;
+            } 
+            activeSlide(prevIndex,item);
+        }
+        function nextSilde(item){
+            let nextIndex = currentIndex + 1;
+            if(nextIndex >= item.length){
+                nextIndex = 0;
+            } 
+            activeSlide(nextIndex,item);
+        }
+
+        activeSlide(currentIndex,slideItem);
+        document.querySelector('#slide_1 .btn_prev').addEventListener('click',function(){
+            prevSilde(slideItem)
+        });
+        document.querySelector('#slide_1 .btn_next').addEventListener('click', function(){
+            nextSilde(slideItem)
+        });
+    </script>
+</body>
+</html>

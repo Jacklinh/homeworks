@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <section class="slide">
+            <div class="container">
+                <h2>image slide caption dots</h2>
+                <div class="slide_wrap" id="slide_2">
+                    <div class="slide_inner">
+                        <div class="slide_item">
+                            <p><img src="./images/slide_1.jpg" width="1000" height="350" alt=""></p>
+                            <p class="slide_caption">slide image 1</p>
+                        </div>
+                        <div class="slide_item">
+                            <p><img src="./images/slide_2.jpg" width="1000" height="350" alt=""></p>
+                            <p class="slide_caption">slide image 2</p>
+                        </div>
+                        <div class="slide_item">
+                            <p><img src="./images/slide_3.jpg" width="1000" height="350" alt=""></p>
+                            <p class="slide_caption">slide image 3</p>
+                        </div>
+                    </div>
+                    <div class="slide_btn control_icon">
+                        <button class="btn btn_prev">Prev</button>
+                        <button class="btn btn_next">Next</button>
+                    </div>
+                    <ol class="slide_dots">
+                    </ol>
+                    <div class="slide_number"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        let slideItem2 = document.querySelectorAll('#slide_2 .slide_item');
+        let currentIndex = 0;
+        function activeSlide(index,item){
+            let classActive = item[index].classList.contains('active');
+            if(!classActive) {
+                    item[currentIndex].classList.remove('active');
+                    item[index].classList.add('active');
+                    currentIndex = index;
+            };
+            let num = `<p>${currentIndex+1}/${slideItem2.length}</p>`;
+            document.querySelector('.slide_number').innerHTML = num;
+        }
+        function prevSilde(item){
+            let prevIndex = currentIndex - 1;
+            if(prevIndex < 0){
+                prevIndex = item.length - 1;
+            } 
+            activeSlide(prevIndex,item);
+        }
+        function nextSilde(item){
+            let nextIndex = currentIndex + 1;
+            if(nextIndex >= item.length){
+                nextIndex = 0;
+            } 
+            activeSlide(nextIndex,item);
+        }
+        activeSlide(currentIndex,slideItem2);
+        document.querySelector('#slide_2 .btn_prev').addEventListener('click',function(){
+            prevSilde(slideItem2)
+        });
+        document.querySelector('#slide_2 .btn_next').addEventListener('click', function(){
+            nextSilde(slideItem2)
+        });
+        // slide dots
+        let slideDots = document.querySelector('.slide_dots');
+        let slideNumber = document.querySelector('.slide_number');
+        slideItem2.forEach(function(value,key){
+            let dot =  document.createElement('li');
+            dot.setAttribute('data-slide-to',key);
+            if(key === currentIndex) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click',function(){
+                eventDot(key);
+            })
+            slideDots.appendChild(dot);
+            let num = document.createElement('p');
+            slideNumber.appendChild(num);
+        });
+        function eventDot(index){
+            let activeDots = slideDots.querySelector('.active');
+            slideItem2[currentIndex].classList.remove('active');
+            slideItem2[index].classList.add('active');
+            activeDots.classList.remove('active');
+            slideDots.querySelectorAll('li')[index].classList.add('active');
+            currentIndex = index;
+            let num = `<p>${currentIndex+1}/${slideItem2.length}</p>`;
+            document.querySelector('.slide_number').innerHTML = num;
+        }
+    </script>
+</body>
+</html>
