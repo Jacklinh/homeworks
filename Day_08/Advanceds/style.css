@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+/* slide basic */
+.slide_inner {
+    display: flex;
+}
+.slide_inner .slide_item {
+    flex: 1;
+    position: relative;
+    display: none;
+}
+.slide_inner .slide_item.active {
+    display: block;
+}
+.slide_inner .slide_item img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.slide_inner .slide_item .slide_caption {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.slide_btn {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.slide_btn .btn {
+    cursor: pointer;
+    padding: 5px 20px;
+    border: none;
+    background-color: brown;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* slide caption  dots*/
+#slide_2 {
+    position: relative;
+}
+.control_icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%
+}
+.control_icon .btn_prev {
+    position: absolute;
+    left: 10px;
+}
+.control_icon .btn_next {
+    position: absolute;
+    right: 10px;
+}
+.slide_dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 15%;
+}
+.slide_dots li {
+    position: relative;
+    flex: 0 1 auto;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    text-indent: -999px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 50%;
+}
+.slide_dots li.active {
+    background-color: #fff;
+}
+.slide_number {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: #fff;
+    font-size: 20px;
+}
