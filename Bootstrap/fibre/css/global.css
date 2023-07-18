@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+:root {
+    --main-bg: #3aafd6;
+    --main-color: #444444;
+    --main-bg-hover: #379bbc;
+    --color-white: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 10px;
+}
+h1 {
+    font-size: 36px;
+}
+  
+h2{
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+  
+h3 {
+    font-size: 18px;
+}
+  
+h4 {
+    font-size: 18px;
+}
+  
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+    font-weight: 500;
+}
+p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.btn-main-color {
+    background-color: var(--main-bg) !important;
+    color: var(--color-white);
+}
+.btn-main-color:hover {
+    background-color: var(--main-bg-hover) !important;
+    color: var(--color-white);
+}
+.btn-circle-sm {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.column-gap-10 {
+    column-gap: 10px;
+}
+.section-p-lg {
+    padding: 50px 0;
+}
+.section-heading {
+    color: var(--main-color);
+}
+.btn-more {
+  display: inline-block;
+  margin: 5px !important;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 17px;
+  border: none;
+  transition: background .3s ease-in-out;
+}
+.bg-lightgrey {
+    background-color: #f4f4f4;
+}
+/* header */
+#tmp_navbar {
+    padding: 28px 5px 22px 5px;
+}
+#tmp_navbar .navbar-brand {
+    padding: 0 0 2px;
+}
+#tmp_navbar .navbar-brand img {
+    vertical-align: top;
+}
+#tmp_navbar .nav-item > a {
+    padding: 10px 15px;
+    color: var(--main-color);
+}
+/* footer */
+#tmp_footer {
+    padding: 20px 0;
+}
+.list-nav li a{
+    position: relative;
+    color: var(--color-white);
+    text-transform: capitalize;
+    text-decoration: none;
+    line-height: 1;
+}
+.list-nav li a:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    height: 80%;
+    width: 2px;
+    transform: translateY(-50%);
+    background-color: var(--color-white);
+}
+.list-social {
+    gap: 0 10px;
+}

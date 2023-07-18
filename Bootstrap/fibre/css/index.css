@@ -1,0 +1,55 @@
+/* service */
+.services-item .services-icon {
+    color: var(--main-bg);
+    font-size: 80px;
+}
+/* function */
+.function_image {
+    background: url("http://egotype.design/work/web/html/fibre/demo/css/../images/function-1-device-shadow.png") no-repeat center;
+    background-size: contain;
+}
+.list-function {
+    gap: 0 15px;
+}
+.function-item i {
+    color: var(--main-bg);
+    font-size: 32px;
+    padding: 10px 0;
+}
+#accordionFuction .accordion-item {
+    border: 0;
+    margin-bottom: 7px;
+    border-radius: 5px;
+}
+#accordionFuction .accordion-button {
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: var(--main-bg);
+    background-color: var(--color-white);
+    outline: none;
+    border: 0;
+    box-shadow: none;
+}
+#accordionFuction .accordion-button.collapsed {
+    color: var(--color-white);
+    background-color: var(--main-bg);
+}
+#accordionFuction .accordion-button:after {
+    content: '--';
+    background: transparent;
+}
+#accordionFuction .accordion-button.collapsed:after {
+    content: '\2b';
+    font-family: "Font Awesome 6 Free";
+    background: transparent;
+}
+/* feature */
+.feature-item .feature-icon {
+    color: var(--main-bg);
+    font-size: 48px;
+}
+.feature-shadown {
+    background: url(http://egotype.design/work/web/html/fibre/demo/css/../images/download-device-shadow.png) no-repeat center;
+    background-size: contain ;
+}
