@@ -111,6 +111,14 @@ img {
 .bg-lightgrey {
     background-color: #f4f4f4;
 }
+.form-control-silver {
+    color: #b2b2b2;
+    background-color: transparent;
+    border: 1px solid #b2b2b2;
+}
+.main-content {
+    overflow: hidden;
+}
 /* header */
 #tmp_navbar {
     padding: 28px 5px 22px 5px;
