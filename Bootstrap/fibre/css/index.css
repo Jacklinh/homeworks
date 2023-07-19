@@ -1,3 +1,19 @@
+/* slider */
+.section-slider {
+    overflow: hidden;
+}
+.section-slider .slide-progress {
+    width: 0;
+    max-width: 100%;
+    height: 2px;
+    background-color: var(--main-bg);
+}
+#tmp_slider .owl-dot span,
+#tmp_slider_testimonial .owl-dot span{
+    width: 5px;
+    height: 5px;
+    margin: 5px 2px;
+}
 /* service */
 .services-item .services-icon {
     color: var(--main-bg);
@@ -52,4 +68,73 @@
 .feature-shadown {
     background: url(http://egotype.design/work/web/html/fibre/demo/css/../images/download-device-shadow.png) no-repeat center;
     background-size: contain ;
+}
+/* price */
+.price-item {
+    padding: 30px 0;
+}
+.price-marker {
+    margin: 25px 0;
+}
+.price-marker p {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 32px;
+    padding: 8px 5px 8px 14px;
+    text-align: left;
+}
+.price-marker p span {
+    font-size: 50%;
+}
+.price-details li {
+    margin-bottom: 25px;
+}
+.price-cent {
+    top: 12px;
+    right: 12px;
+}
+.price-period {
+    bottom: 10px;
+}
+.video-iframe {
+    margin-bottom: 20px;
+}
+/* testimonial */
+.testimonial-item .blockquote {
+    color: #444;
+    background-color: #ebf7fb;
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+.testimonial-item .blockquote:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 0;
+    width: 0;
+    margin-left: -15px;
+    border: 15px solid;
+    content: " ";
+    pointer-events: none;
+    border-color: #ebf7fb transparent transparent;
+}
+.testimonial-item .testimonial-avatar {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 20px;
+}
+.testimonial-item .blockquote-footer {
+    margin: 20px 0;
+}
+.testimonial-item .blockquote-footer h4 {
+    color: var(--main-bg);
+}
+.testimonial-item .blockquote-footer::before {
+    display: none;
+}
+.testimonial-social {
+    margin-top: 20px;
+    gap: 0 5px;
 }

@@ -1,0 +1,14 @@
+@media screen and (max-width: 769px) {
+    .feature-item {
+        text-align: center;
+    }
+    .price-item {
+        margin-bottom: 30px;
+    }
+    .slider-content {
+        text-align: center;
+    }
+    .slide-btn {
+        justify-content: space-around;
+    }
+}
