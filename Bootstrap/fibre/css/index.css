@@ -193,3 +193,11 @@
 .form-contact .form-group {
     width: calc((100% - 60px) / 2);
 }
+.animate__animated   {
+    -webkit-animation-duration : 3s  ;
+    animation-duration : 3s  ;
+}
+.animate-out {
+    -webkit-animation-delay : 0ms  ;
+    animation-delay : 0ms  ;
+}
