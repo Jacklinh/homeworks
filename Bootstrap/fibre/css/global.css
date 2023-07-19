@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.4;
     margin: 0 0 10px;
+    text-transform: capitalize;
 }
 h1 {
     font-size: 36px;
@@ -76,6 +77,11 @@ img {
     line-height: 30px;
     margin: 0;
     padding: 0;
+}
+.btn-border {
+    color: #bfbfbf !important;
+    background-color: #ffffff !important;
+    border: 1px solid #bfbfbf !important;
 }
 .column-gap-10 {
     column-gap: 10px;
