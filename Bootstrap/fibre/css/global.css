@@ -111,6 +111,20 @@ img {
 .bg-lightgrey {
     background-color: #f4f4f4;
 }
+.form-control-silver {
+    color: #b2b2b2;
+    background-color: transparent;
+    border: 1px solid #b2b2b2;
+}
+.main-content {
+    overflow: hidden;
+}
+#tmp_header {
+    transition: background-color 0.5s ease-in-out;
+}
+#tmp_header.fixed-top {
+    background-color: var(--color-white) !important;
+}
 /* header */
 #tmp_navbar {
     padding: 28px 5px 22px 5px;
@@ -148,4 +162,24 @@ img {
 }
 .list-social {
     gap: 0 10px;
+}
+.page-top {
+    bottom: 75px;
+    right: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5 ease-in-out;
+}
+.page-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+.page-top a {
+    width: 42px;
+    height: 42px;
+    padding: 5px;
+    margin: 0;
+}
+.page-top a i {
+    line-height: 32px;
 }
